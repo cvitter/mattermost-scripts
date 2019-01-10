@@ -1,6 +1,5 @@
-# The following SQL query retrieves a list of users who are
-# members of active teams ordered by Team, LastName,
-# and then Username
+# The following SQL query retrieves a list of users who are members 
+# of active teams ordered by Team, LastName, and then Username
 # Tested on MySQL 5.7.24
 SELECT 
     Teams.DisplayName AS Team,
