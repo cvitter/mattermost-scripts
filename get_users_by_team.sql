@@ -8,13 +8,13 @@ SELECT
     Users.FirstName,
     Users.Username
 FROM 
-	mattermost.TeamMembers
+    mattermost.TeamMembers
 JOIN
-	mattermost.Teams ON TeamMembers.TeamId = Teams.Id
+    mattermost.Teams ON TeamMembers.TeamId = Teams.Id
 JOIN
     mattermost.Users ON TeamMembers.UserId = Users.Id
 WHERE
-	TeamMembers.DeleteAt = 0 AND
+    TeamMembers.DeleteAt = 0 AND
     Teams.DeleteAt = 0
 ORDER BY
-	Team, LastName, Username;
+    Team, LastName, Username;
