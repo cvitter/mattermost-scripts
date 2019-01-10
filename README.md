@@ -1,1 +1,1 @@
-# mattermost-scripts
+# Mattermost Scripts
