@@ -5,10 +5,10 @@
 # of posts visible to users in Mattermost
 # Tested on MySQL 5.7.24
 SELECT 
-	COUNT(*) 
+   COUNT(*) 
 FROM
-	mattermost.Posts
+   mattermost.Posts
 JOIN
-    mattermost.Channels ON Posts.ChannelId = Channels.Id
+   mattermost.Channels ON Posts.ChannelId = Channels.Id
 WHERE
-	Channels.Type = 'P' or Channels.Type = 'O';
+   Channels.Type = 'P' or Channels.Type = 'O';
