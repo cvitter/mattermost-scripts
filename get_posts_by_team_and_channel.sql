@@ -2,7 +2,8 @@
 # by team and the total number of posts in each channel
 # ordered by Team and Channel.
 # Note: This query returns only Public ('O') and Private ('P') 
-# channels and posts that have not been deleted.
+# channels and posts that are visible (not deleted or past 
+# revisions of edited posts).
 # Tested on MySQL 5.7.24
 SELECT
     Teams.DisplayName AS Team,
