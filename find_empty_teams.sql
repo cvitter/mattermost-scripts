@@ -1,5 +1,6 @@
 SELECT
     Teams.DisplayName AS Team,
+    Teams.Name AS InternalName,
     COUNT(Teams.DisplayName) AS Members,
     SUM( CASE WHEN TeamMembers.DeleteAt = 0 THEN 1 ELSE 0 END ) AS Active,
     SUM( CASE WHEN TeamMembers.DeleteAt > 0 THEN 1 ELSE 0 END ) AS Deleted
@@ -12,7 +13,7 @@ LEFT JOIN
 WHERE
     Teams.DeleteAt = 0
 GROUP BY
-    Team
+    Team, InternalName
 ORDER BY
     Team
 ;
